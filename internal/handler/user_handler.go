@@ -9,12 +9,12 @@ import (
 
 func CreateUser(c *gin.Context) {
 	admin := c.GetHeader("X-Admin")
+	//ledger := c.GetHeader("Ledger")
 	if admin != "true" {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Only admin can create a user"})
 		return
 	}
 
-	c.JSON(http.StatusOK, "abcdedf")
 
 	var userTransaction model.UserTransaction
 	if err := c.ShouldBindJSON(&userTransaction); err != nil {

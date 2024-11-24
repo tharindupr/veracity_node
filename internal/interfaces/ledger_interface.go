@@ -4,6 +4,7 @@ package interfaces
 type Ledger interface {
 	AddTransaction(transactionData []byte) (string, error) // Adds a transaction to the ledger
 	GetTransaction(transactionID string) ([]byte, error)   // Retrieves a transaction from the ledger by ID
+	CreateUser(userName string) (bool, error)
 }
 
 // type Ledger interface {
