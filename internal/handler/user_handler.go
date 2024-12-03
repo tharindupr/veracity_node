@@ -17,6 +17,7 @@ func CreateUser(c *gin.Context) {
 
 
 	var userTransaction model.UserTransaction
+	
 	if err := c.ShouldBindJSON(&userTransaction); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return

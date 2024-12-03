@@ -1,0 +1,5 @@
+server:
+  port: 8080
+  host: localhost
+
+ca_cert_path: "./identity_manager/adminMSP/cacerts/reencoded_ca_cert.pem"  # Default path to the CA certificate
